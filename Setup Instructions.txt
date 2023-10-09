@@ -1,0 +1,13 @@
+Build the docker image with application using the following command:
+
+    docker build -t backend-challenge .
+
+ Publish and run the docker image exposing the same port in the .env file wih the command:
+
+    docker run --publish 3000:3000 backend-challenge
+
+Access the application through wither browser or postman with http://localhost:{port} using the same port in the .env.
+To use the desired route of items simply use the GET request.
+
+The query parameters are page and perPage, both numeric values.
+Both are optionals and can be used like so: http://localhost:{port}?page=10&perPage=20
